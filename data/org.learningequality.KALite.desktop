@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=KA Lite
+GenericName=KA Lite
+Comment=An offline version of Khan Academy.
+Keywords=Khan Academy;Virtual School;
+Type=Application
+Exec=kalite-app
+Categories=Education;
+Terminal=false
+Icon=kalite-app
