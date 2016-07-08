@@ -1,0 +1,16 @@
+Source: kalite-app
+Section: admin
+Priority: standard
+Maintainer: Mario Sanchez Prada <mario@endlessm.com>
+Build-Depends: debhelper (>= 9),
+	dh-autoreconf,
+	intltool
+Standards-Version: 3.8.0
+Homepage: http://www.endlessm.com
+
+Package: kalite-app
+Architecture: any
+Depends: ${misc:Depends}
+Description: KA Lite wrapper application
+ Small package to contain the "client side" bits of the
+ KA Lite application (launcher script, .desktop file...)
