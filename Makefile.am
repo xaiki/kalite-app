@@ -1,4 +1,4 @@
-SUBDIRS = data po
+SUBDIRS = src data po
 
 EXTRA_DIST = \
 	$(NULL)
