@@ -7,4 +7,4 @@ Type=Application
 Exec=kalite-app
 Categories=Education;
 Terminal=false
-Icon=kalite-app
+Icon=org.learningequality.KALite
