@@ -34,3 +34,12 @@ Besides those details, eos-kalite-app is meant to be bundled together with
 the KA Lite server ([source code here](https://github.com/endlessm/ka-lite-source)) which can be either manually started
 or automatically started via systemd's socket-activation, which is the ideal
 scenario and the one used in Endless (requires [integration with the OS](https://github.com/endlessm/eos-kalite-system-helper)).
+
+## License
+
+eos-kalite-app is Copyright (C) 2016 Endless Mobile, Inc. and
+is licensed under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 2 of
+the License, or (at your option) any later version.
+
+See the COPYING file for the full version of the GNU GPLv2 license
