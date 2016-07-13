@@ -1,0 +1,3 @@
+# List of source files containing translatable strings.
+data/org.learningequality.KALite.appdata.xml.in
+data/org.learningequality.KALite.desktop.in
