@@ -21,6 +21,9 @@ install_language_packs() {
         return
     fi
 
+    # ok we really need to do this, first get some base data working
+    kalite manage setup -n
+
     # check if we have any uninstalled language pack first.
     for f in $(find ${lang_dir} -type f); do
         lang=$(echo $f | sed s/'-minimal'//g | sed s/'.zip'//g)
