@@ -16,7 +16,7 @@ install_language_packs() {
         return;
     fi
 
-    if [ -d ${done_file} ]; then
+    if [ -e ${done_file} ]; then
         echo "Contentpacks and assesment data already imported"
         return
     fi
