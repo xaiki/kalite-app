@@ -26,7 +26,7 @@ install_language_packs() {
 
     # check if we have any uninstalled language pack first.
     for f in $(find ${lang_dir} -type f); do
-        lang=$(echo $f | sed s/'-minimal'//g | sed s/'.zip'//g)
+        lang=$(basename $f | sed s/'-minimal'//g | sed s/'.zip'//g)
         kalite manage retrievecontentpack local $lang $f && \
             rm -rf $f
     done
