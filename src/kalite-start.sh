@@ -31,10 +31,7 @@ install_language_packs() {
             rm -rf $f
     done
 
-    for f in $(find ${assessment_dir} -type f); do
-        kalite manage unpack_assessment_zip $f && \
-            rm -rf $f
-    done
+    # assessment data is handled by the package
 
     touch ${done_file}
 }
