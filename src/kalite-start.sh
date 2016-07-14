@@ -7,7 +7,7 @@
 install_language_packs() {
     base_dir="/var/lib/kalite"
     temp_dir=$(mktemp -d)
-    done_dir="${base_dir}/done"
+    done_file="${base_dir}/done"
     lang_dir="${base_dir}/content"
     assessment_dir="${base_dir}/assessment"
 
@@ -16,7 +16,7 @@ install_language_packs() {
         return;
     fi
 
-    if [ -d ${done_dir} ]; then
+    if [ -d ${done_file} ]; then
         echo "Contentpacks and assesment data already imported"
         return
     fi
@@ -25,15 +25,15 @@ install_language_packs() {
     for f in $(find ${lang_dir} -type f); do
         lang=$(echo $f | sed s/'-minimal'//g | sed s/'.zip'//g)
         kalite manage retrievecontentpack local $lang $f && \
-            mv $f ${temp_dir}
+            rm -rf $f
     done
 
     for f in $(find ${assessment_dir} -type f); do
         kalite manage unpack_assessment_zip $f && \
-            mv $f ${temp_dir}
+            rm -rf $f
     done
 
-    mv ${temp_dir} ${done_dir}
+    touch ${done_file}
 }
 
 # This no-op if the language packs were installed.
